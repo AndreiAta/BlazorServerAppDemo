@@ -6,7 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 builder.Services.AddServerSideBlazor();
 builder.Services.AddSingleton<EventService>();
-builder.Services.AddSingleton<ParticipantService>();
 
 var app = builder.Build();
 

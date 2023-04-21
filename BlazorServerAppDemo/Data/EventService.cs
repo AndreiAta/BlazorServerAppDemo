@@ -1,11 +1,17 @@
 ﻿namespace BlazorServerAppDemo.Data;
 
-public class EventService
+public class EventService : IEventService
 {
     private static readonly string[] EventNames = new[]
     {
         "Annual Party", "Intro course to React.js", "Learning in databases"
     };
+
+    public Task AddParticipantToEvent(string? companyEventName, Participant participant)
+    {
+        // Add participant to event
+        return Task.CompletedTask;
+    }
 
     public Task<CompanyEvent[]> GetAllEventsAsync()
     {
@@ -16,12 +22,6 @@ public class EventService
             Description = "Description",
             DateAndTime = DateTime.UtcNow,
         }).ToArray());
-    }
-
-    public Task AddParticipantToEvent(string? companyEventName, Participant participant)
-    {
-        // Add participant to event
-        return Task.CompletedTask;
     }
 
     public Task<Participant[]> GetAllParticipantsForEvent(string companyEventName)

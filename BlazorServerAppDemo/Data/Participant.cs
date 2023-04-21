@@ -1,19 +1,18 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BlazorServerAppDemo.Data
+namespace BlazorServerAppDemo.Data;
+
+//public record Participant(string FullName, string Email, string PhoneNumber);
+
+public class Participant
 {
-    //public record Participant(string FullName, string Email, string PhoneNumber);
+    [Required]
+    public string FullName { get; set;}
 
-    public class Participant
-    {
-        [Required]
-        public string FullName { get; set;}
+    [Required]
+    public string Email { get; set;}
 
-        [Required]
-        public string Email { get; set;}
+    [Required]
+    public string PhoneNumber { get; set;}
 
-        [Required]
-        public string PhoneNumber { get; set;}
-
-    }
 }

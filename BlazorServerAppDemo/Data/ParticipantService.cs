@@ -1,10 +1,9 @@
-﻿namespace BlazorServerAppDemo.Data
+﻿namespace BlazorServerAppDemo.Data;
+
+public class ParticipantService
 {
-    public class ParticipantService
+    public Task<Participant[]> GetAllParticipants()
     {
-        public Task<Participant[]> GetAllParticipants()
-        {
-            return Task.FromResult(new[] {new Participant()} );
-        }
+        return Task.FromResult(new[] {new Participant()} );
     }
 }
